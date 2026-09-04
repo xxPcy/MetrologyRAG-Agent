@@ -1,0 +1,231 @@
+:root {
+  --page-bg: #f6f7f9;
+  --panel-bg: #ffffff;
+  --border: #e1e6ef;
+  --border-strong: #cbd3df;
+  --text: #1f2937;
+  --muted: #667085;
+  --accent: #9f2d20;
+  --accent-hover: #84251b;
+  --soft-accent: #fff4f2;
+}
+
+#MainMenu,
+footer,
+[data-testid="stToolbar"],
+[data-testid="stDecoration"] {
+  display: none !important;
+}
+
+[data-testid="stHeader"] {
+  background: transparent;
+}
+
+.stApp,
+[data-testid="stAppViewContainer"] {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.block-container {
+  max-width: 1480px;
+  padding: 2rem 3rem 3.25rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.4rem 1.6rem;
+  margin: 0 0 1.25rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.app-title h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.75rem;
+  font-weight: 720;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.app-title p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.runtime-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.runtime-pills span {
+  max-width: 28rem;
+  padding: 0.38rem 0.62rem;
+  color: #344054;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 1.25rem !important;
+}
+
+h3 {
+  font-size: 1.02rem !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+  gap: 1.15rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.stTabs [data-baseweb="tab"] {
+  height: 2.55rem;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 560;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  color: var(--accent);
+}
+
+.stTabs [data-baseweb="tab-highlight"] {
+  background-color: var(--accent);
+  height: 2px;
+}
+
+div.stButton > button,
+div.stDownloadButton > button {
+  min-height: 2.35rem;
+  border-radius: 6px;
+  border-color: var(--border-strong);
+  background: #ffffff;
+  color: #243447;
+  font-weight: 650;
+}
+
+div.stButton > button:hover,
+div.stDownloadButton > button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+div.stButton > button[kind="primary"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+div.stButton > button[kind="primary"]:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: #ffffff;
+}
+
+[data-testid="stTextArea"] textarea,
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+  border-radius: 6px;
+  border-color: var(--border-strong);
+  background: #ffffff;
+}
+
+[data-baseweb="select"] > div {
+  border-radius: 6px;
+  border-color: var(--border-strong);
+  background: #ffffff;
+}
+
+[data-testid="stMetric"] {
+  padding: 0.9rem 1rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--text);
+  font-size: 1.55rem;
+  font-weight: 680;
+}
+
+[data-testid="stDataFrame"] {
+  overflow: hidden;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+[data-testid="stImage"] {
+  display: flex;
+  justify-content: center;
+}
+
+[data-testid="stImage"] img {
+  max-width: 980px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+[data-testid="stExpander"] {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.stAlert {
+  border-radius: 6px;
+}
+
+code {
+  border-radius: 4px;
+}
+
+@media (max-width: 860px) {
+  .block-container {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .runtime-pills {
+    justify-content: flex-start;
+  }
+
+  .runtime-pills span {
+    max-width: 100%;
+  }
+}

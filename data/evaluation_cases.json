@@ -1,0 +1,171 @@
+[
+  {
+    "id": "case_001",
+    "question": "检定 0～1.6 MPa、1.6 级压力表应该选择什么标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_min": 0, "range_max": 1.6, "unit": "MPa", "accuracy_class": 1.6},
+    "expected_device_ids": ["D-PG-001"]
+  },
+  {
+    "id": "case_002",
+    "question": "0~2.5MPa、1.0级的一般压力表，帮我推荐标准器。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 2.5, "unit": "MPa", "accuracy_class": 1.0},
+    "expected_device_ids": ["D-DP-001"]
+  },
+  {
+    "id": "case_003",
+    "question": "被检压力真空表量程 -0.1～6 MPa，准确度等级 1.6 级，标准器怎么选？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_min": -0.1, "range_max": 6, "unit": "MPa", "accuracy_class": 1.6},
+    "expected_device_ids": ["D-PC-001"]
+  },
+  {
+    "id": "case_004",
+    "question": "我有一块 0 至 60 MPa、2.5 级压力表，需要什么压力标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 60, "unit": "MPa", "accuracy_class": 2.5},
+    "expected_device_ids": ["D-PC-002"]
+  },
+  {
+    "id": "case_005",
+    "question": "检定 0～150 mm、0.02 级游标卡尺，标准器候选有哪些？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 150, "unit": "mm", "accuracy_class": 0.02},
+    "expected_device_ids": ["D-CC-001"]
+  },
+  {
+    "id": "case_006",
+    "question": "0~300mm、0.05级数显卡尺应该用什么标准器核验？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 300, "unit": "mm", "accuracy_class": 0.05},
+    "expected_device_ids": ["D-CC-002"]
+  },
+  {
+    "id": "case_007",
+    "question": "通用卡尺 0～100 mm，0.02 级，请给出推荐和引用。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 100, "unit": "mm", "accuracy_class": 0.02},
+    "expected_device_ids": ["D-CC-001"]
+  },
+  {
+    "id": "case_008",
+    "question": "检定 0～10 mm、0.01 级百分表，标准器选型流程是什么？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "dial_indicator", "range_max": 10, "unit": "mm", "accuracy_class": 0.01},
+    "expected_device_ids": ["D-DI-001"]
+  },
+  {
+    "id": "case_009",
+    "question": "千分表量程 0~5mm，0.005级，能推荐标准器吗？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "dial_indicator", "range_max": 5, "unit": "mm", "accuracy_class": 0.005},
+    "expected_device_ids": ["D-DI-001"]
+  },
+  {
+    "id": "case_010",
+    "question": "指示表 0 至 25 mm、0.02 级，帮我查标准并选标准器。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "dial_indicator", "range_max": 25, "unit": "mm", "accuracy_class": 0.02},
+    "expected_device_ids": ["D-DI-001"]
+  },
+  {
+    "id": "case_011",
+    "question": "外径千分尺 0～25 mm，MPE 0.004，需要哪类标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "micrometer", "range_max": 25, "unit": "mm", "accuracy_class": 0.004},
+    "expected_device_ids": ["D-MC-001"]
+  },
+  {
+    "id": "case_012",
+    "question": "0~100mm、MPE:0.01 的千分尺，帮我选标准器。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "micrometer", "range_max": 100, "unit": "mm", "accuracy_class": 0.01},
+    "expected_device_ids": ["D-MC-002"]
+  },
+  {
+    "id": "case_013",
+    "question": "检定 0～1.0 MPa、1.6 级真空表时，需要先查什么标准依据？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 1.0, "unit": "MPa", "accuracy_class": 1.6},
+    "expected_device_ids": ["D-PG-001"]
+  },
+  {
+    "id": "case_014",
+    "question": "一般压力表 0~6MPa 1.6级，请给出通过规则校验的推荐。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 6, "unit": "MPa", "accuracy_class": 1.6},
+    "expected_device_ids": ["D-PC-001"]
+  },
+  {
+    "id": "case_015",
+    "question": "卡尺 0～200 mm，0.05级，标准器目录里能匹配哪个？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 200, "unit": "mm", "accuracy_class": 0.05},
+    "expected_device_ids": ["D-CC-002"]
+  },
+  {
+    "id": "case_016",
+    "question": "百分表检定：0~25mm，0.02级，帮我输出推荐原因。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "dial_indicator", "range_max": 25, "unit": "mm", "accuracy_class": 0.02},
+    "expected_device_ids": ["D-DI-001"]
+  },
+  {
+    "id": "case_017",
+    "question": "游标卡尺量程 0 至 150 mm，准确度 0.02级，需要 Python 规则校验后推荐。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 150, "unit": "mm", "accuracy_class": 0.02},
+    "expected_device_ids": ["D-CC-001"]
+  },
+  {
+    "id": "case_018",
+    "question": "检定压力表需要哪些标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters"],
+    "expected_parameters": {"instrument_type": "pressure_gauge"},
+    "expected_device_ids": []
+  },
+  {
+    "id": "case_019",
+    "question": "通用卡尺标准器选择有什么 Demo 规则？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters"],
+    "expected_parameters": {"instrument_type": "caliper"},
+    "expected_device_ids": []
+  },
+  {
+    "id": "case_020",
+    "question": "压力表 0～2.5 MPa 1.6级，推荐设备并给标准引用。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 2.5, "unit": "MPa", "accuracy_class": 1.6},
+    "expected_device_ids": ["D-DP-001"]
+  },
+  {
+    "id": "case_021",
+    "question": "数显卡尺 0～300 mm 0.05级，目录里有没有可用标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "caliper", "range_max": 300, "unit": "mm", "accuracy_class": 0.05},
+    "expected_device_ids": ["D-CC-002"]
+  },
+  {
+    "id": "case_022",
+    "question": "千分尺 0～25 mm MPE:0.004，按 Demo 规则推荐。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "micrometer", "range_max": 25, "unit": "mm", "accuracy_class": 0.004},
+    "expected_device_ids": ["D-MC-001"]
+  },
+  {
+    "id": "case_023",
+    "question": "0～10mm 0.01级指示表，要用什么标准器？",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "dial_indicator", "range_max": 10, "unit": "mm", "accuracy_class": 0.01},
+    "expected_device_ids": ["D-DI-001"]
+  },
+  {
+    "id": "case_024",
+    "question": "压力表 0～1.6MPa 2.5级，请检索依据并推荐。",
+    "expected_tools": ["search_metrology_standard", "extract_parameters", "query_instrument_catalog", "validate_instrument", "recommend_instruments"],
+    "expected_parameters": {"instrument_type": "pressure_gauge", "range_max": 1.6, "unit": "MPa", "accuracy_class": 2.5},
+    "expected_device_ids": ["D-PG-001"]
+  }
+]
+

@@ -1,0 +1,77 @@
+pressure_gauge:
+  description: "Demo rule for elastic-element pressure gauges. Not a real JJG clause."
+  aliases:
+    - 压力表
+    - 一般压力表
+    - 压力真空表
+    - 真空表
+  standard_instrument_types:
+    - digital_pressure_gauge
+    - pressure_calibrator
+    - precision_pressure_gauge
+  range:
+    coverage_required: true
+  accuracy:
+    ratio: 4
+    lower_is_better: true
+
+digital_pressure_gauge:
+  description: "Demo rule for digital pressure gauges."
+  aliases:
+    - 数字压力计
+    - 数字压力表
+  standard_instrument_types:
+    - pressure_calibrator
+    - precision_pressure_gauge
+  range:
+    coverage_required: true
+  accuracy:
+    ratio: 3
+    lower_is_better: true
+
+caliper:
+  description: "Demo rule for general calipers. Not a real JJG clause."
+  aliases:
+    - 卡尺
+    - 通用卡尺
+    - 游标卡尺
+    - 数显卡尺
+  standard_instrument_types:
+    - gauge_block
+    - caliper_checker
+  range:
+    coverage_required: true
+  accuracy:
+    ratio: 3
+    lower_is_better: true
+
+dial_indicator:
+  description: "Demo rule for dial indicators and test indicators."
+  aliases:
+    - 百分表
+    - 千分表
+    - 指示表
+  standard_instrument_types:
+    - dial_indicator_tester
+    - gauge_block
+  range:
+    coverage_required: true
+  accuracy:
+    ratio: 3
+    lower_is_better: true
+
+micrometer:
+  description: "Demo rule for micrometers."
+  aliases:
+    - 千分尺
+    - 外径千分尺
+    - 内径千分尺
+  standard_instrument_types:
+    - gauge_block
+    - micrometer_checker
+  range:
+    coverage_required: true
+  accuracy:
+    ratio: 3
+    lower_is_better: true
+

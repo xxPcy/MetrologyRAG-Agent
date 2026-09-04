@@ -1,0 +1,11 @@
+id,name,type,model,range_min,range_max,unit,accuracy_class,manufacturer,serial_no,due_date,department,accuracy_text,source
+D-PG-001,精密压力表,precision_pressure_gauge,Demo-PG-001,0,1.6,MPa,0.25,Demo Manufacturer,DEMO-PG-001,2099-12-31,Demo Lab,0.25级,demo
+D-DP-001,数字压力计,digital_pressure_gauge,Demo-DP-001,0,2.5,MPa,0.05,Demo Manufacturer,DEMO-DP-001,2099-12-31,Demo Lab,0.05级,demo
+D-PC-001,压力校验仪,pressure_calibrator,Demo-PC-001,-0.1,6,MPa,0.02,Demo Manufacturer,DEMO-PC-001,2099-12-31,Demo Lab,0.02级,demo
+D-PC-002,压力校验仪,pressure_calibrator,Demo-PC-002,0,60,MPa,0.05,Demo Manufacturer,DEMO-PC-002,2099-12-31,Demo Lab,0.05级,demo
+D-CC-001,卡尺检定器,caliper_checker,Demo-CC-001,0,150,mm,0.005,Demo Manufacturer,DEMO-CC-001,2099-12-31,Demo Lab,MPE:0.005mm,demo
+D-CC-002,卡尺检定器,caliper_checker,Demo-CC-002,0,300,mm,0.01,Demo Manufacturer,DEMO-CC-002,2099-12-31,Demo Lab,MPE:0.01mm,demo
+D-DI-001,百分表检定仪,dial_indicator_tester,Demo-DI-001,0,25,mm,0.001,Demo Manufacturer,DEMO-DI-001,2099-12-31,Demo Lab,MPE:0.001mm,demo
+D-GB-001,量块,gauge_block,Demo-GB-001,0,100,mm,0.001,Demo Manufacturer,DEMO-GB-001,2099-12-31,Demo Lab,MPE:0.001mm,demo
+D-MC-001,千分尺检定器,micrometer_checker,Demo-MC-001,0,25,mm,0.001,Demo Manufacturer,DEMO-MC-001,2099-12-31,Demo Lab,MPE:0.001mm,demo
+D-MC-002,千分尺检定器,micrometer_checker,Demo-MC-002,0,100,mm,0.002,Demo Manufacturer,DEMO-MC-002,2099-12-31,Demo Lab,MPE:0.002mm,demo
