@@ -58,7 +58,7 @@ MetrologyRAG-Agent/
 │   ├── markdown/
 │   ├── chroma_db/
 │   ├── instruments_demo.csv
-│   ├── instruments.csv        # 本地私有标准器目录，默认不提交
+│   ├── instruments.csv        
 │   ├── evaluation_cases.json
 │   └── demo_standard.md
 ├── docs/
@@ -192,7 +192,7 @@ Agent 执行流程：
 
 本地如果存在 `data/instruments.csv`，系统会优先读取这份目录，便于接入真实标准器台账。该文件默认被 `.gitignore` 排除，避免把序列号、科室、有效期等内部数据误提交到公开 GitHub。
 
-所有 Demo 设备数据仅用于系统功能演示。真实业务中应补齐标准器唯一标识、证书有效期、测量范围、准确度等级或不确定度字段，并由专业人员复核。
+所有设备数据仅用于系统功能演示。真实业务中应补齐标准器唯一标识、证书有效期、测量范围、准确度等级或不确定度字段，并由专业人员复核。
 
 ## 规则引擎说明
 
@@ -200,7 +200,7 @@ Agent 执行流程：
 
 - 类型匹配：被检仪器类型映射到允许使用的标准器类型列表。
 - 量程覆盖：标准器量程需要覆盖被检仪器量程，并支持同量纲单位换算。
-- 准确度比例：标准器准确度按配置比例优于被检仪器，例如压力表 Demo 规则使用 `4:1`。
+- 准确度比例：标准器准确度按配置比例优于被检仪器，例如压力表规则使用 `4:1`。
 
 规则参数通过 `config/rules.yaml` 配置，Python 代码负责执行通用校验逻辑。后续可以继续扩展不确定度、证书有效期、介质、环境条件、年稳定性、分段量程等规则。
 
@@ -227,7 +227,7 @@ PDF → Markdown
 重新构建知识库
 ```
 
-如果 `data/pdf/` 和 `data/markdown/` 为空，系统会使用 `data/demo_standard.md` 构建演示知识库。真实 PDF 和转换后的 Markdown 默认被 `.gitignore` 排除。
+如果 `data/pdf/` 和 `data/markdown/` 为空，系统会使用 `data/demo_standard.md` 构建演示知识库。
 
 ## Evaluation
 
@@ -235,11 +235,10 @@ PDF → Markdown
 
 - Tool Calling Success Rate：要求 `expected_tools` 都被调用，且关键参数成功解析。
 - End-to-End Task Success Rate：要求任务完成、参数抽取正确、必要工具被调用、至少一个推荐标准器通过规则校验，且最终答案包含有效引用。
-- `expected_device_hit`：单独标记是否命中测试集中的 golden `expected_device_ids`，用于观察 Demo 数据回归，不作为真实标准器目录下端到端成功的唯一条件。
+- `expected_device_hit`：单独标记是否命中测试集中的 golden `expected_device_ids`，用于观察数据回归，不作为真实标准器目录下端到端成功的唯一条件。
 - 平均工具调用次数。
 - 平均响应时间。
 
-README 不写死 96% / 91% 等指标，所有数值以实际运行结果为准。
 
 命令行运行：
 
@@ -255,10 +254,4 @@ pytest
 
 测试不依赖真实 LLM API，覆盖规则校验、目录查询和推荐工具。
 
-## 补充标准 PDF
 
-我整理了若干可继续核验的 PDF 线索在 `docs/standard_pdf_sources.md`。建议只在本地演示时放入已确认可使用的 PDF，不要把真实标准全文提交到公开 GitHub 仓库。
-
-## Disclaimer
-
-本项目为求职作品集 Demo，不构成计量检定、校准或合规判定意见。实际计量业务必须以正式发布的国家标准、JJG/JJF 规程规范、机构质量体系文件以及专业人员判断为准。
